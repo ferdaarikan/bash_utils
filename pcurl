@@ -1,0 +1,11 @@
+#!/bin/bash
+
+URL=$1
+NUM_PROCESS=$2
+FILE_NAME=$3
+
+for ((i = 1; i <= $NUM_PROCESS; i++)); do
+	
+	curl -s $URL > $FILE_NAME.$i.txt &
+
+done
